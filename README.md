@@ -33,7 +33,7 @@ import seaborn as sns
 df = pd.read_csv("titanic_dataset.csv")
 df
 ```
-![image](https://github.com/user-attachments/assets/c8cdbd5f-07b6-4262-b214-961a6073b63d)
+<img src="https://github.com/user-attachments/assets/c8cdbd5f-07b6-4262-b214-961a6073b63d" width="900">
 
 ```
 df.info()
@@ -72,12 +72,12 @@ per
 ```
 sns.countplot(data = df, x = "Survived")
 ```
-![image](https://github.com/user-attachments/assets/fb1fe9cd-c283-43cc-a9f3-bfc722691bf1)
+<img src="https://github.com/user-attachments/assets/fb1fe9cd-c283-43cc-a9f3-bfc722691bf1" width="500">
 
 ```
 df
 ```
-![image](https://github.com/user-attachments/assets/0bae13b2-ea61-4937-a757-78e05163903a)
+<img src="https://github.com/user-attachments/assets/0bae13b2-ea61-4937-a757-78e05163903a" width="900">
 
 ```
 df.Pclass.unique()
@@ -88,55 +88,55 @@ df.Pclass.unique()
 df.rename(columns={'Sex':'Gender'}, inplace = True)
 df
 ```
-![image](https://github.com/user-attachments/assets/c6b0913b-0b85-4b9f-9dfe-2445e2161a87)
+<img src="https://github.com/user-attachments/assets/c6b0913b-0b85-4b9f-9dfe-2445e2161a87" width="900">
 
 ```
 sns.catplot(x = 'Gender', col = 'Survived', kind = 'count', data = df, height = 5, aspect = .7)
 ```
-![image](https://github.com/user-attachments/assets/96e37385-b484-4163-b1d3-855843363e08)
+<img src="https://github.com/user-attachments/assets/96e37385-b484-4163-b1d3-855843363e08" width="500">
 
 ```
 sns.catplot(x = 'Survived', hue = 'Gender', kind = 'count', data = df)
 ```
-![image](https://github.com/user-attachments/assets/1ee8e2d3-0310-4333-9a0f-ea3d0ad98115)
+<img src="https://github.com/user-attachments/assets/1ee8e2d3-0310-4333-9a0f-ea3d0ad98115" width="500">
 
 ```
 df.boxplot(column = 'Age', by = 'Survived')
 ```
-![image](https://github.com/user-attachments/assets/8cb8b905-7a03-4d97-b170-c49850eeddf6)
+<img src="https://github.com/user-attachments/assets/8cb8b905-7a03-4d97-b170-c49850eeddf6" width="500">
 
 ```
 sns.scatterplot(x = df['Age'], y = df['Fare'])
 ```
-![image](https://github.com/user-attachments/assets/259a826f-c28c-4b92-a2ad-70a3314e3938)
+<img src="https://github.com/user-attachments/assets/259a826f-c28c-4b92-a2ad-70a3314e3938" width="500">
 
 ```
 sns.jointplot(x = 'Age', y = 'Fare', data = df)
 ```
-![image](https://github.com/user-attachments/assets/65800d1b-5d48-470c-89bb-df87dcb1bb48)
+<img src="https://github.com/user-attachments/assets/65800d1b-5d48-470c-89bb-df87dcb1bb48" width="500">
 
 ```
 fig, ax1= plt.subplots(figsize=(8,5))
 pt = sns.boxplot(ax=ax1, x = 'Pclass', y= 'Age',hue = 'Gender', data = df)
 ```
-![image](https://github.com/user-attachments/assets/3666531f-918b-4fb8-a6e2-628a39e27665)
+<img src="https://github.com/user-attachments/assets/3666531f-918b-4fb8-a6e2-628a39e27665" width="500">
 
 ```
 sns.catplot(data = df, col = 'Survived', x = 'Gender', hue = 'Pclass', kind = 'count')
 ```
-![image](https://github.com/user-attachments/assets/2db22244-1487-46b8-b826-4ae69432ef3e)
+<img src="https://github.com/user-attachments/assets/2db22244-1487-46b8-b826-4ae69432ef3e" width="600">
 
 ```
 sns.pairplot(df)
 ```
-![image](https://github.com/user-attachments/assets/5a6dc0dc-1ba6-4f1f-9515-7abece7152fb)
+<img src="https://github.com/user-attachments/assets/5a6dc0dc-1ba6-4f1f-9515-7abece7152fb" width="600">
 
 ```
 numerical_df = df.select_dtypes(include=['number'])
 corr = numerical_df.corr()
 sns.heatmap(corr, annot=True)
 ```
-![image](https://github.com/user-attachments/assets/e9928a4d-c6d5-4cbb-bf5f-32966012c8fb)
+<img src="https://github.com/user-attachments/assets/e9928a4d-c6d5-4cbb-bf5f-32966012c8fb" width="600">
 
 # RESULT
-        <<INCLUDE YOUR RESULT HERE>>
+  Hence performed the exploratory data analysis on the given dataset
